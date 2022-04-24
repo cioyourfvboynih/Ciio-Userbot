@@ -20,11 +20,11 @@ from userbot.events import register
 from userbot.utils import edit_or_reply, skyzu_cmd
 
 absen = [
-    "**Eh ada skyzu**",
+    "**Eh ada Cio**",
     "**Hadir ganteng** 🥵",
     "**Hadir bro** 😎",
     "**Hadir kak** 😉",
-    "**Hadir bang sky** 😁",
+    "**Hadir bang Cio** 😁",
     "**Hadir kak maap telat** 🥺",
 ]
 
@@ -149,7 +149,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**⚡𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
+        f"**⚡𝐂𝐈𝐈𝐎 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
         f"➾ __Signal__    __:__ "
         f"`%sms` \n"
         f"➾ __Uptime__ __:__ "
@@ -173,7 +173,7 @@ async def _(ping):
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
     await sky.edit(
-        f"**⚡𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
+        f"**⚡𝐂𝐈𝐈𝐎 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n"
         f"** ▹  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ▹  Uᴘᴛɪᴍᴇ  :** "
@@ -228,7 +228,7 @@ async def speedtst(spd):
         f"`{result['ping']}` \n"
         "✧ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** ⚡skyzu-userbot⚡"
+        "✧ **BOT:** ⚡Ciio-Userbot⚡"
     )
 
 
