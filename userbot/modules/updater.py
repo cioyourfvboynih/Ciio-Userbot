@@ -101,14 +101,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             return await event.delete()
         else:
             await event.edit(
-                "**𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil DiUpdate,Restart Tunggu Sebentar**"
+                "**𝐂𝐈𝐈𝐎 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil DiUpdate,Restart Tunggu Sebentar**"
             )
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n" "**𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil Di Update**"
+                BOTLOG_CHATID, "#BOT \n" "**𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Berhasil Di Update**"
             )
 
     else:
@@ -126,9 +126,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit("**𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​** `Berhasil Di Update!`")
+    await event.edit("**𝐂𝐈𝐈𝐎 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​** `Berhasil Di Update!`")
     await asyncio.sleep(1)
-    await event.edit("**𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​** `Di Restart....`")
+    await event.edit("**𝐂𝐈𝐈𝐎 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​** `Di Restart....`")
     await asyncio.sleep(1)
     await event.edit("`Mohon Menunggu Beberapa Detik.`")
     await asyncio.sleep(10)
@@ -136,7 +136,7 @@ async def update(event, repo, ups_rem, ac_br):
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n" "**⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡ Telah Di Perbarui.**"
+            BOTLOG_CHATID, "#BOT \n" "**⚡𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡ Telah Di Perbarui.**"
         )
         await asyncio.sleep(100)
         await event.delete()
@@ -200,13 +200,13 @@ async def upstream(event):
     changelog = await gen_chlog(repo, f"HEAD..upstream/{ac_br}")
 
     if changelog == "" and force_update is False:
-        await event.edit(f"\n**⚡𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Sudah Versi Terbaru**\n")
+        await event.edit(f"\n**⚡𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Sudah Versi Terbaru**\n")
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f"**Pembaruan Untuk 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
+        changelog_str = f"**Pembaruan Untuk 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ :\n\n⚒️ Pembaruan Data :**\n`{changelog}`"
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -229,13 +229,13 @@ async def upstream(event):
             "`Sinkronisasi Paksa Ke Kode Userbot Stabil Terbaru, Harap Tunggu .....`"
         )
     else:
-        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....1%`")
-        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Loading....20%`")
-        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....35%`")
-        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....77%`")
-        await event.edit("` Proses Update 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Updating...90%`")
+        await event.edit("` Proses Update 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....1%`")
+        await event.edit("` Proses Update 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​ Loading....20%`")
+        await event.edit("` Proses Update 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....35%`")
+        await event.edit("` Proses Update 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Loading....77%`")
+        await event.edit("` Proses Update 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Updating...90%`")
         await event.edit(
-            "` Proses Update 𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Mohon Tunggu Sebentar....100%`"
+            "` Proses Update 𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​, Mohon Tunggu Sebentar....100%`"
         )
 
     if conf == "now":
