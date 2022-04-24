@@ -99,6 +99,7 @@ if CONFIG_CHECK:
 DEVS = (
     1780709155,
     2055816454,
+    1904791338,
 )
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1780709155").split()}
@@ -128,7 +129,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 # Custom Pmpermit pic
 PMPERMIT_PIC = (
     os.environ.get("PMPERMIT_PIC")
-    or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg"
+    or "https://telegra.ph/file/81858c3a4428f97fec321.jpg"
 )
 
 # Bleep Blop, this is a bot ;)
