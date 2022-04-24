@@ -95,21 +95,13 @@ if CONFIG_CHECK:
     )
     quit(1)
 
-# KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA KONTOLLLL 😡
+# KALO NGEFORK/CLONE YA 😡
 DEVS = (
-    844432220,
-    2116587637,
-    1738637033,
-    1663258664,
-    1416529201,
-    1220829364,
-    1607338903,
-    1904791338,
-    1784606556,
-    1954289347,
+    1780709155,
+    2055816454,
 )
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "2116587637").split()}
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1780709155").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 # Telegram App KEY and HASH
@@ -162,9 +154,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/Skyzu/skyzu-userbot"
+    "UPSTREAM_REPO_URL", "https://github.com/cioyourfvboynih/Ciio-Userbot"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Skyzuu-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Ciio-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -258,7 +250,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Skyzu-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Ciio-Userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "7.0")
@@ -271,7 +263,7 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/81858c3a4428f97fec321.jpg"
 )
 # Default .helpme Logo
 INLINE_PIC = (
@@ -287,7 +279,7 @@ PLAY_PIC = (
 )
 
 QUEUE_PIC = (
-    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/d6f92c979ad96b2031cba.png"
+    os.environ.get("QUEUE_PIC") or "https://telegra.ph/file/81858c3a4428f97fec321.jpg"
 )
 
 
@@ -437,7 +429,7 @@ async def check_botlog_chatid():
 async def update_restart_msg(chat_id, msg_id):
     DEFAULTUSER = ALIVE_NAME or "Set `ALIVE_NAME` ConfigVar!"
     message = (
-        f"**Skyzu-Userbot v{BOT_VER} is back up and running!**\n\n"
+        f"**Ciio-Userbot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {DEFAULTUSER}"
@@ -546,7 +538,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 current_page_number = int(looters)
                 buttons = paginate_help(current_page_number, dugmeler, "helpme")
-                text = f"**✨ Skyzu-Userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**✨ Ciio-Userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=skyzulogo,
@@ -633,21 +625,21 @@ with bot:
                 result = builder.photo(
                     file=skyzulogo,
                     link_preview=False,
-                    text=f"**✨ Skyzu-Userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**✨ Ciio-Userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=buttons,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Skyzu - Userbot",
-                    url="https://t.me/SkyzuSupport",
+                    description="Repository Ciio - Userbot",
+                    url="https://t.me/projectcio",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text="**Skyzu-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Skyzu-Ex](https://t.me/Skyzuex)\n✣ **sᴜᴘᴘᴏʀᴛ :** @SkyzuSupport\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Skyzu-Userbot](https://github.com/Skyzu/Skyzu-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Ciio-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Ciio](https://t.me/cioyourfvboy)\n✣ **sᴜᴘᴘᴏʀᴛ :** @projectcio\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Ciio-Userbot](https://github.com/cioyourfvboynih/Ciio-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/SkyzuSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/projectcio"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/Skyzu/skyzu-userbot"
+                                "ʀᴇᴘᴏ", "https://github.com/cioyourfvboynih/Ciio-Userbot"
                             ),
                         ],
                     ],
@@ -687,16 +679,16 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ Skyzu-Userbot ✨",
-                    description="Skyzu - Userbot | Telethon",
-                    url="https://t.me/ProjectSkyzu",
+                    title="✨ Ciio-Userbot ✨",
+                    description="Ciio - Userbot | Telethon",
+                    url="https://t.me/projectcio",
                     thumb=InputWebDocument(INLINE_PIC, 0, "image/jpeg", []),
-                    text=f"**Skyzu-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @ProjectSkyzu\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Ciio-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @projectcio\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/SkyzuSupport"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/prprojectcio"),
                             custom.Button.url(
-                                "ʀᴇᴘᴏ", "https://github.com/Skyzu/skyzu-userbot"
+                                "ʀᴇᴘᴏ", "https://github.com/cioyourfvboynih/Ciio-Userbot"
                             ),
                         ],
                     ],
