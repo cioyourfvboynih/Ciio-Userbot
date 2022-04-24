@@ -9,7 +9,7 @@ RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
     apt-get install -y nodejs && \
     npm i -g npm
     
-RUN git clone -b Skyzuu-Userbot https://github.com/Skyzu/skyzu-userbot /root/userbot
+RUN git clone -b Ciio-Userbot https://github.com/cioyourfvboynih/Ciio-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
