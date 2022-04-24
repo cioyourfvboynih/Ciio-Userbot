@@ -123,27 +123,27 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@skyzu_cmd(pattern="skyzu(?: |$)(.*)")
+@skyzu_cmd(pattern="cio(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
     await typew.edit("**Ehh Lu Mau Tau Gak?**")
     sleep(1)
-    await typew.edit("**Sih Skyzu mukanya mirip babi😂**")
+    await typew.edit("**Sih Cio mukanya mirip babi😂**")
     sleep(1)
     await typew.edit("**Ehh Gak Bercanda Deh😁**")
     sleep(1)
-    await typew.edit("**Emang Bener Sih Skyzu Mukanya Kaya Babi🙈**")
+    await typew.edit("**Emang Bener Sih Cio Mukanya Kaya Babi🙈**")
     sleep(1)
-    await typew.edit("**Ehh Engga Deh,Skyzu Kan Ganteng Kaya Artis Korea😄**")
+    await typew.edit("**Ehh Engga Deh,Cio Kan Ganteng Kaya Artis Korea😄**")
     sleep(1)
     await typew.edit("**Tapi Boong😂**")
     sleep(1)
     await typew.edit("**HAHAHAHAHAHAHA**")
     sleep(1)
-    await typew.edit("**Udah Ahh Takut Skyzu Nangis Minta Balon😂**")
+    await typew.edit("**Udah Ahh Takut Cio Nangis Minta Balon😂**")
     sleep(1)
-    await typew.edit("**Maaf Ya Skyzu Ganteng Bercanda😁**")
+    await typew.edit("**Maaf Ya Cio Ganteng Bercanda😁**")
     sleep(1)
     await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
 
@@ -164,8 +164,8 @@ CMD_HELP.update(
         \nUsage : Member Goblok\
         \n\n Cmd : `{cmd}kenalin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `{cmd}skyzu`\
-        \nUsage : buat ngeledek skyzu\
+        \n\n Cmd : `{cmd}cio`\
+        \nUsage : buat ngeledek cio\
         \n\n Cmd : `{cmd}p`\
         \nUsage : Untuk Memberi Salam\
     "
