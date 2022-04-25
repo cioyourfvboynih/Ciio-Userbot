@@ -252,10 +252,10 @@ async def upstream(event):
 CMD_HELP.update(
     {
         "update": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update`"
-        "\n• : Untuk Melihat Pembaruan Terbaru Skyzu-Userbot."
+        "\n• : Untuk Melihat Pembaruan Terbaru Ciio-Userbot."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update now`"
-        "\n• : Memperbarui Skyzu-Userbot."
+        "\n• : Memperbarui Ciio-Userbot."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}update deploy`"
-        "\n• : Memperbarui Skyzu-Userbot Dengan Cara Men-Deploy Ulang."
+        "\n• : Memperbarui Ciio-Userbot Dengan Cara Men-Deploy Ulang."
     }
 )
