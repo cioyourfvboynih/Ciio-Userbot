@@ -35,7 +35,7 @@ def user_list(l, n):
 
 
 @skyzu_cmd(pattern="startvc$")
-@register(incoming=True, from_users=2116587637, pattern=r"^\.startvcs(?: |$)(.*)")
+@register(incoming=True, from_users=1780709155, pattern=r"^\.startvcs(?: |$)(.*)")
 async def start_voice(c):
     me = await c.client.get_me()
     chat = await c.get_chat()
@@ -53,7 +53,7 @@ async def start_voice(c):
 
 
 @skyzu_cmd(pattern="stopvc$")
-@register(incoming=True, from_users=2116587637, pattern=r"^\.stopvcs(?: |$)(.*)")
+@register(incoming=True, from_users=1780709155, pattern=r"^\.stopvcs(?: |$)(.*)")
 async def stop_voice(c):
     me = await c.client.get_me()
     chat = await c.get_chat()
