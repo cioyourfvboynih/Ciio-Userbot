@@ -119,10 +119,10 @@ async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
         "**Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ**\n"
-        "𝗥𝗲𝗽𝗼 🇮🇩\n"
-        "╰⎆ [𝐂𝐈𝐈𝐎-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​](https://github.com/cioyourfvboynih/Ciio-Userbot)\n"
-        "❏ **Oᴡɴᴇʀ​** ⎆ [Ciio](t.me/cioyourfvboy)\n"
-        "❏ **Sᴜᴘᴘᴏʀᴛ**​ ⎆ [groups](t.me/projectcio)\n"
+        "𝗥𝗲𝗽𝗼 𝗕𝘆 𝗖𝗶𝗶𝗼-𝗨𝘀𝗲𝗿𝗯𝗼𝘁 🇮🇩\n"
+        "╰⎆ [ʀᴇᴘᴏ​](https://github.com/cioyourfvboynih/Ciio-Userbot)\n"
+        "┌❏  **Oᴡɴᴇʀ ʀᴇᴘᴏ​** ⎆ [ᴄɪᴏ̸](t.me/cioyourfvboy)\n"
+        "┌❏  **Sᴜᴘᴘᴏʀᴛ**​ ⎆ [groups](t.me/projectcio)\n"
     )
 
 
