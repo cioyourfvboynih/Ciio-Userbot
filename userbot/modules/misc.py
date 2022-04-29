@@ -64,7 +64,7 @@ async def sleepybot(time):
 @skyzu_cmd(pattern="shutdown$")
 async def killdabot(event):
     """For .shutdown command, shut the bot down."""
-    await event.edit("**Mematikan Skyzu-Userbot....**")
+    await event.edit("**Mematikan Ciio-Userbot....**")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -76,7 +76,7 @@ async def killdabot(event):
 
 @skyzu_cmd(pattern="restart$")
 async def killdabot(event):
-    await event.edit("**Restarting Skyzu-Userbot...**")
+    await event.edit("**Restarting Ciio-Userbot...**")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
