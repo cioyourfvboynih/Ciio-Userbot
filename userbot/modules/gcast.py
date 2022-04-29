@@ -33,6 +33,7 @@ GCAST_BLACKLIST = [
     -1001489233533,  # kitaroSupport
     -1001688172956,  # KekinianSupoort
     -1001552721588,  # projectcio
+    -1001578091827,  # PrimeSupportGroup
 ]
 
 
