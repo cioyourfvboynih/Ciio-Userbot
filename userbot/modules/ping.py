@@ -21,11 +21,11 @@ from userbot.utils import edit_or_reply, skyzu_cmd
 
 absen = [
     "**Eh ada Cio**",
-    "**Hadir ganteng** 🥵",
-    "**Hadir bro** 😎",
-    "**Hadir kak** 😉",
+    "**Hadir Cio ganteng** 🥵",
+    "**Hadir bro Cio** 😎",
+    "**Hadir kak Cio** 😉",
     "**Hadir bang Cio** 😁",
-    "**Hadir kak maap telat** 🥺",
+    "**Hadir Cio maap telat** 🥺",
 ]
 
 roas = [
