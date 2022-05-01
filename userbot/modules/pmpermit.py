@@ -2,46 +2,23 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
-
-"""Userbot module for keeping control who PM you."""
+#
+# Recode by @mrismanaziz
+# @SharingUserbot
+""" Userbot module for keeping control who PM you. """
 
 from sqlalchemy.exc import IntegrityError
+from telethon import events
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
 from telethon.tl.functions.messages import ReportSpamRequest
 from telethon.tl.types import User
 
-from userbot import ALIVE_LOGO, ALIVE_NAME, BOTLOG, BOTLOG_CHATID
+from userbot import BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
-from userbot import (
-    CMD_HELP,
-    COUNT_PM,
-    LASTMSG,
-    LOGS,
-    PM_AUTO_BAN,
-    PM_LIMIT,
-    PMPERMIT_PIC,
-    PMPERMIT_TEXT,
-)
-from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot import CMD_HELP, COUNT_PM, LASTMSG, LOGS, PM_AUTO_BAN, PM_LIMIT, bot
+from userbot.events import man_cmd
+from userbot.utils import edit_delete, edit_or_reply
 
-if PMPERMIT_PIC is None:
-    CUSTOM_PIC = ALIVE_LOGO
-else:
-    CUSTOM_PIC = str(PMPERMIT_PIC)
-
-COUNT_PM = {}
-LASTMSG = {}
-
-
-# ========================= CONSTANTS ============================
-
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
-CUSTOM_TEXT = (
-    str(PMPERMIT_TEXT)
-    if PMPERMIT_TEXT
-    else f"__Halo kawan, saya bot yang menjaga room chat Ciio-Userbot {DEFAULTUSER} di mohon jangan melakukan spam , kalau anda melakukan itu OTOMATIS saya akan memblockir anda!__ \n"
-)
 DEF_UNAPPROVED_MSG = (
     "╔════════════════════╗\n"
     "     ⛑ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⛑\n"
@@ -137,7 +114,8 @@ async def permitpm(event):
                         + " **Telah Diblokir Karna Melakukan Spam Ke Room Chat**",
                     )
 
-@register(events.NewMessage(outgoing=True))
+
+@bot.on(events.NewMessage(outgoing=True))
 async def auto_accept(event):
     """Will approve automatically if you texted them first."""
     if not PM_AUTO_BAN:
@@ -185,7 +163,7 @@ async def auto_accept(event):
                     )
 
 
-@skyzu_cmd(skyzu_cmd(outgoing=True, pattern=r"notifoff$"))
+@bot.on(man_cmd(outgoing=True, pattern=r"notifoff$"))
 async def notifoff(noff_event):
     try:
         from userbot.modules.sql_helper.globals import addgvar
@@ -197,7 +175,7 @@ async def notifoff(noff_event):
     )
 
 
-@skyzu_cmd(skyzu_cmd(outgoing=True, pattern=r"notifon$"))
+@bot.on(man_cmd(outgoing=True, pattern=r"notifon$"))
 async def notifon(non_event):
     try:
         from userbot.modules.sql_helper.globals import delgvar
@@ -209,7 +187,7 @@ async def notifon(non_event):
     )
 
 
-@skyzu_bot(skyzu_cmd(outgoing=True, pattern=r"(?:setuju|ok)\s?(.)?"))
+@bot.on(man_cmd(outgoing=True, pattern=r"(?:setuju|ok)\s?(.)?"))
 async def approvepm(apprvpm):
     """For .ok command, give someone the permissions to PM you."""
     try:
@@ -272,7 +250,7 @@ async def approvepm(apprvpm):
     )
 
 
-@skyzu_cmd(skyzu_cmd(outgoing=True, pattern=r"(?:tolak|nopm)\s?(.)?"))
+@bot.on(man_cmd(outgoing=True, pattern=r"(?:tolak|nopm)\s?(.)?"))
 async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
@@ -326,7 +304,7 @@ async def disapprovepm(disapprvpm):
     )
 
 
-@skyzu_cmd(skyzu_cmd(outgoing=True, pattern=r"block$"))
+@bot.on(man_cmd(outgoing=True, pattern=r"block$"))
 async def blockpm(block):
     """For .block command, block people from PMing you!"""
     if block.reply_to_msg_id:
@@ -352,7 +330,7 @@ async def blockpm(block):
         pass
 
 
-@skyzu_cmd(skyzu_cmd(outgoing=True, pattern=r"unblock$"))
+@bot.on(man_cmd(outgoing=True, pattern=r"unblock$"))
 async def unblockpm(unblock):
     """For .unblock command, let people PMing you again!"""
     if unblock.reply_to_msg_id:
@@ -362,7 +340,7 @@ async def unblockpm(unblock):
         await unblock.edit("**Anda Sudah Tidak Diblokir Lagi.**")
 
 
-@skyzu_cmd(skyzu_cmd(outgoing=True, pattern=r"(set|get|reset) pmpermit(?: |$)(\w*)"))
+@bot.on(man_cmd(outgoing=True, pattern=r"(set|get|reset) pmpermit(?: |$)(\w*)"))
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
