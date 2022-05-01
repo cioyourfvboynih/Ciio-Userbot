@@ -137,8 +137,7 @@ async def permitpm(event):
                         + " **Telah Diblokir Karna Melakukan Spam Ke Room Chat**",
                     )
 
-
-@bot.on(events.NewMessage(outgoing=True))
+@regiter(events.NewMessage(outgoing=True))
 async def auto_accept(event):
     """Will approve automatically if you texted them first."""
     if not PM_AUTO_BAN:
@@ -186,7 +185,7 @@ async def auto_accept(event):
                     )
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"notifoff$"))
+@skyzu_cmd(man_cmd(outgoing=True, pattern=r"notifoff$"))
 async def notifoff(noff_event):
     try:
         from userbot.modules.sql_helper.globals import addgvar
@@ -198,7 +197,7 @@ async def notifoff(noff_event):
     )
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"notifon$"))
+@skyzu_cmd(man_cmd(outgoing=True, pattern=r"notifon$"))
 async def notifon(non_event):
     try:
         from userbot.modules.sql_helper.globals import delgvar
@@ -210,7 +209,7 @@ async def notifon(non_event):
     )
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"(?:setuju|ok)\s?(.)?"))
+@skyzu_bot(man_cmd(outgoing=True, pattern=r"(?:setuju|ok)\s?(.)?"))
 async def approvepm(apprvpm):
     """For .ok command, give someone the permissions to PM you."""
     try:
@@ -273,7 +272,7 @@ async def approvepm(apprvpm):
     )
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"(?:tolak|nopm)\s?(.)?"))
+@skyzu_cmd(man_cmd(outgoing=True, pattern=r"(?:tolak|nopm)\s?(.)?"))
 async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
@@ -327,7 +326,7 @@ async def disapprovepm(disapprvpm):
     )
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"block$"))
+@skyzu_cmd(man_cmd(outgoing=True, pattern=r"block$"))
 async def blockpm(block):
     """For .block command, block people from PMing you!"""
     if block.reply_to_msg_id:
@@ -353,7 +352,7 @@ async def blockpm(block):
         pass
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"unblock$"))
+@skyzu_cmd(man_cmd(outgoing=True, pattern=r"unblock$"))
 async def unblockpm(unblock):
     """For .unblock command, let people PMing you again!"""
     if unblock.reply_to_msg_id:
@@ -363,7 +362,7 @@ async def unblockpm(unblock):
         await unblock.edit("**Anda Sudah Tidak Diblokir Lagi.**")
 
 
-@bot.on(man_cmd(outgoing=True, pattern=r"(set|get|reset) pmpermit(?: |$)(\w*)"))
+@skyzu_cmd(man_cmd(outgoing=True, pattern=r"(set|get|reset) pmpermit(?: |$)(\w*)"))
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
