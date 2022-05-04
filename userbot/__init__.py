@@ -97,9 +97,10 @@ if CONFIG_CHECK:
 
 # KALO NGEFORK/CLONE YA 😡
 DEVS = (
-    1780709155,
-    2055816454,
-    1731365899,
+    2116587637, #Skyzu
+    1780709155, #Cio
+    2055816454, #Dato
+    1731365899, #Brian
 )
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1780709155").split()}
