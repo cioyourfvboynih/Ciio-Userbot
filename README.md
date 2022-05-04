@@ -14,9 +14,14 @@
   <img src="https://telegra.ph/file/81858c3a4428f97fec321.jpg">
 </p>
 
-## <p align="center">DEPLOY TO HEROKU</p>
+## <p align="center">DEPLOY TO BOT HEROKU</p>
 
 <p align="center"><a href="https://telegram.dog/XTZ_HerokuBot?start=Y2lveW91cmZ2Ym95bmloL0NpaW8tVXNlcmJvdCBDaWlvLVVzZXJib3Q"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blue?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+
+## <p align="center">DEPLOY TO WEB HEROKU</p>
+
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/cioyourfvboynih/Ciio-Userbot">
+  <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-aqua?style=flat&logo=heroku" width="325" height="50.100" /></a></p>
 
 
 ## Group Support:
