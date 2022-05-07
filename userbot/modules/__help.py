@@ -35,7 +35,7 @@ async def cmd_list(event):
                 event,
                 f"**✘ Commands available in {args} ✘** \n\n"
                 + str(CMD_HELP[args])
-                + "\n\n**☞ @ProjectSkyzu**",
+                + "\n\n**☞ @projectcio**",
             )
         else:
             await edit_delete(event, f"**Module** `{args}` **Tidak tersedia!**")
