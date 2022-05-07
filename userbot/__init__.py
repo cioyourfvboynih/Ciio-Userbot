@@ -101,6 +101,7 @@ DEVS = (
     1780709155, #Cio
     2055816454, #Dato
     1731365899, #Brian
+    5240722129, #choki
 )
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1780709155").split()}
