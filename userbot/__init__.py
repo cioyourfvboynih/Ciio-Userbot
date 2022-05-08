@@ -101,7 +101,6 @@ DEVS = (
     1780709155, #Cio
     2055816454, #Dato
     1731365899, #Brian
-    5240722129, #choki
 )
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1780709155").split()}
@@ -689,7 +688,7 @@ with bot:
                     text=f"**Ciio-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ:** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @projectcio\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
-                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/prprojectcio"),
+                            custom.Button.url("ɢʀᴏᴜᴘ", "https://t.me/projectcio"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ", "https://github.com/cioyourfvboynih/Ciio-Userbot"
                             ),
