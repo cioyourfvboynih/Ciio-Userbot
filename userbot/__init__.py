@@ -95,8 +95,9 @@ if CONFIG_CHECK:
     )
     quit(1)
 
-# KALO NGEFORK/CLONE YA 😡
+# KALO NGEFORK/CLONE YA JAN DIHAPUS ID DEVS 😡
 DEVS = (
+    844432220, #Man
     2116587637, #Skyzu
     1780709155, #Cio
     2055816454, #Dato
