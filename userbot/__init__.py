@@ -104,6 +104,7 @@ DEVS = (
     1731365899, #Brian
     1738637033, #TD
     5289683612, #Eja
+    1923480697, #lepin
 )
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "1780709155").split()}
@@ -233,7 +234,7 @@ YOUTUBE_API_KEY = (
 )
 
 # Untuk Perintah .skyalive
-SKYZU_TEKS_KUSTOM = os.environ.get("SKYZU_TEKS_KUSTOM", "I'am Using Skyzu-Userbot⚡")
+SKYZU_TEKS_KUSTOM = os.environ.get("SKYZU_TEKS_KUSTOM", "I'am Using Ciio-Userbot⚡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
