@@ -503,7 +503,7 @@ async def bot_start(event):
             start_msg = f"**Users**: {mention}\
                         \n\n**Bot**: [{OWNER}](tg://user?id={OWNER_ID}) \
                         \n**Forward**: True\
-                        \n\n**Powered by**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)"
+                        \n\n**Powered by**: [Ciio-Userbot](https://github.com/cioyourfvboynih/Ciio-Userbot)"
             buttons = [(Button.inline("ɪɴꜰᴏ", data="infor"),)]
     else:
         start_msg = (
@@ -560,7 +560,7 @@ async def _(event):
 async def infor(event):
     await tgbot.send_message(
         event.chat_id,
-        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/NastySupportt)\n**Github**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/templat-userbot2)",
+        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/projectcio)\n**Github**: [Ciio-Userbot](https://github.com/cioyourfvboynih/Ciio-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/cioyourfvboynih/Ciio-Userbot)",
         buttons=[
             [
                 custom.Button.inline(
